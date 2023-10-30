@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Nemo </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/83cd0450bc.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <div class="header">
+
+
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/nemo.jpg" width="125px"></a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <div id="cart-wrap">
+                    <a href="" class="fas fa-shopping-cart"></a>
+                    <span id="cart">0</span>
+                </div>
+            </div>
+
+
+    <div class="small-container">
+        <h2 class="title">-----All products-----</h2>
+        <input class="bar" type="text" id="searchbar" onkeyup="search()" name="search" placeholder="search for a product...">
+        <select>
+            <option>Default sorting</option>
+            <option>sort by price</option>
+            <option>sort by popularity</option>
+            <option>sort by rating</option>
+            <option>sort by sale</option>
+        </select>
+        <div class="row">
+            <div class="col-4">
+                <img src="images/product-1.jpg">
+                <h4>Airpods Pro</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star"aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>KES 5,000</p>
+                <button class="btn add-to-cart" data-product="Airpods Pro" data-price="5000">Add to Cart</button>
+            </div>
+            <div class="col-4">
+                <img src="images/product-2.jpg">
+                <h4>Wireless Mouse</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star"aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>KES 2,448</p>
+                <button class="btn add-to-cart" data-product="Wireless Mouse" data-price="2448">Add to Cart</button>
+            </div>
+            <div class="col-4">
+                <img src="images/product-3.jpg">
+                <h4>Backlight keyboard</h4>
+                <div class="rating">
+                    <i class="fa fa-star" data-index="0" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="1" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="2" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="3" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="4" aria-hidden="true"></i>
+                </div>
+                <p>KES 4,041</p>
+                <button class="btn add-to-cart" data-product="Backlight Keyboard" data-price="4041">Add to Cart</button>
+            </div>
+            <div class="col-4">
+                <img src="images/product-4.jpg">
+                <h4>Bluetooth speaker</h4>
+                <div class="rating">
+                    <i class="fa fa-star" data-index="0" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="1" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="2" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="3" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="4" aria-hidden="true"></i>
+                </div>
+                <p>KES 3,300</p>
+                <button class="btn add-to-cart" data-product="Bluetooth speaker" data-price="3300">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <img src="images/powerbank.jpg">
+                <h4>Powerbank</h4>
+                <div class="rating">
+                    <i class="fa fa-star" data-index="0" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="1" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="2" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="3" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="4" aria-hidden="true"></i>
+                </div>
+                <p>KES 1,998</p>
+                <button class="btn add-to-cart" data-product="Powerbank" data-price="1998">Add to Cart</button>
+            </div>
+            <div class="col-4">
+                <img src="images/wirelesscharger.jpg">
+                <h4>Wireless charger</h4>
+                <div class="rating">
+                    <i class="fa fa-star" data-index="0" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="1" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="2" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="3" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="4" aria-hidden="true"></i>
+                </div>
+                <p>KES 1,900</p>
+                <button class="btn add-to-cart" data-product="Wireless charger" data-price="1900">Add to Cart</button>
+            </div>
+            <div class="col-4">
+                <img src="images/mouse.jpg">
+                <h4>Mouse pad</h4>
+                <div class="rating">
+                    <i class="fa fa-star" data-index="0" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="1" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="2" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="3" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="4" aria-hidden="true"></i>
+                </div>
+                <p>KES 3,900</p>
+                <button class="btn add-to-cart" data-product="Mouse pad" data-price="3900">Add to Cart</button>
+            </div>
+            <div class="col-4">
+                <img src="images/laptop.jpg">
+                <h4>HP laptop</h4>
+                <div class="rating">
+                    <i class="fa fa-star" data-index="0" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="1" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="2" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="3" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="4" aria-hidden="true"></i>
+                </div>
+                <p>KES 56,648</p>
+                <button class="btn add-to-cart" data-product="HP laptop" data-price="56648">Add to Cart</button>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/card.jpg">
+                    <h4>Memory card</h4>
+                    <div class="rating">
+                        <i class="fa fa-star" data-index="0" aria-hidden="true"></i>
+                        <i class="fa fa-star" data-index="1" aria-hidden="true"></i>
+                        <i class="fa fa-star" data-index="2" aria-hidden="true"></i>
+                        <i class="fa fa-star" data-index="3" aria-hidden="true"></i>
+                        <i class="fa fa-star" data-index="4" aria-hidden="true"></i>
+                    </div>
+                    <p>KES 1,099</p>
+                    <button class="btn add-to-cart" data-product="Memory card" data-price="1099">Add to Cart</button>
+                </div>
+                <div class="col-4">
+                    <img src="images/tablet.jpg">
+                    <h4>Tablet</h4>
+                    <div class="rating">
+                        <i class="fa fa-star" data-index="0" aria-hidden="true"></i>
+                        <i class="fa fa-star" data-index="1" aria-hidden="true"></i>
+                        <i class="fa fa-star" data-index="2" aria-hidden="true"></i>
+                        <i class="fa fa-star" data-index="3" aria-hidden="true"></i>
+                        <i class="fa fa-star" data-index="4" aria-hidden="true"></i>
+                    </div>
+                    <p>KES 18,899</p>
+                    <button class="btn add-to-cart" data-product="Tablet" data-price="18899">Add to Cart</button>
+                </div>
+                <div class="col-4">
+                    <img src="images/cable.jpg">
+                    <h4>HDMI cable</h4>
+                    <div class="rating">
+                        <i class="fa fa-star" data-index="0" aria-hidden="true"></i>
+                        <i class="fa fa-star" data-index="1" aria-hidden="true"></i>
+                        <i class="fa fa-star" data-index="2" aria-hidden="true"></i>
+                        <i class="fa fa-star" data-index="3" aria-hidden="true"></i>
+                        <i class="fa fa-star" data-index="4" aria-hidden="true"></i>
+                    </div>
+                    <p>KES 1,499</p>
+                    <button class="btn add-to-cart" data-product="HDMI cable" data-price="1499">Add to Cart</button>
+                </div>
+                <div class="col-4">
+                    <img src="images/charger.jpg">
+                    <h4>USB charger</h4>
+                    <div class="rating">
+                        <i class="fa fa-star" data-index="0" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="1" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="2" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="3" aria-hidden="true"></i>
+                    <i class="fa fa-star" data-index="4" aria-hidden="true"></i>
+                    </div>
+                    <p>KES 599</p>
+                    <button class="btn add-to-cart" data-product="USB charger" data-price="599">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="page-btn">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span> &#9758;</span>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <!------brands----->
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="images/logo-apple.jpg">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-sony.jpg">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-jbl.jpg">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-hp.jpg">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-asus.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------footer-------->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-2">
+                    <img src="images/tech.jpg">
+                    <p>Embrace innovation and let technology be your guide.</p>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2023 -NjariaOwen</p>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+      
+      const addToCartButtons = document.querySelectorAll(".add-to-cart");
+      const cartIcon = document.querySelector("#cart-wrap .fa-shopping-cart");
+      const cartCount = document.getElementById("cart");
+      
+      let itemCount = 0;
+      let products = [];
+      
+      function updateCartCount() {
+        cartCount.textContent = itemCount;
+      }
+      
+      function addToCart(product) {
+        itemCount++;
+        updateCartCount();
+        products.push(product);
+      }
+      
+      addToCartButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const productName = button.getAttribute('data-product');
+                  const productPrice = parseFloat(button.getAttribute('data-price'));
+      
+         
+      
+          const product = {
+            name: productName,
+            price: productPrice,
+          };
+      
+          cart.push(product);
+      
+          localStorage.setItem('cart', JSON.stringify(cart));
+      
+          alert(productName + '\nAdded To Cart');
+        });
+      });
+      addToCartButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const productName = button.parentNode.querySelector("h4").textContent;
+            addToCart(productName);
+          });
+        });
+      
+        cartIcon.addEventListener("click", () => {
+          if (products.length > 0) {
+              window.open("cart.html")
+          } else {
+           window.open("cart.html")
+         }
+        });
+      
+      </script>
+    
+      <script>
+        function search() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('col-4');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
+
+</script>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAj3zzAXKeG2tGeVP07vJdaoPMI99l5__4",
+      authDomain: "e-commerce-application-8e159.firebaseapp.com",
+      databaseURL: "https://e-commerce-application-8e159-default-rtdb.firebaseio.com",
+      projectId: "e-commerce-application-8e159",
+      storageBucket: "e-commerce-application-8e159.appspot.com",
+      messagingSenderId: "929830172376",
+      appId: "1:929830172376:web:6a75fb3f15131b371cc9ad",
+      measurementId: "G-GJ53CPYJBM"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+    </body>
+  
+</html>

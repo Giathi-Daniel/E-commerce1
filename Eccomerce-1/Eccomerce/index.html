@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/RLEu2H01.svg" type="image/x-icon">
+    <title>BlackShark Ecommerce </title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Vendor CSS Files -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="./boxicons/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Firebase Script -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script> -->
+
+    <!-- TEMPLATE JS -->
+    <script src="script.js" async></script>
+
+    <!-- EMAIL-PASS LOGIN  -->
+    <script src="email-pass.js" defer type="module"></script>
+
+    <!-- FACEBOOK LOGIN  -->
+    <script src="facebook.js" defer type="module"></script>
+
+    <!-- TWITTER LOGIN  -->
+    <script src="twitter.js" defer type="module"></script>
+</head>
+<body>
+
+    <section id="header">
+        <div class="logo">
+            <img src="images/RLEu2H01.svg" style="inline-size: 40px;">
+        </div>
+
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html" style="margin-inline-end: 5px;">contact</a></li>
+                <button class="btn-popup">Login</button>
+                <!-- <li><a href="signup.html">Sign Up</a></li> -->
+                <li id="lg-bag" class="cart">
+                    <a href="cart.html"  class="addCart">
+                        <i class="fas fa-shopping-basket"></i><span>0</span>
+                    </a>
+                </li>
+                <a href="#" id="close">
+                    <i class="fas fa-times"></i>
+                </a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html">
+                <i class="fas fas fa-shopping-basket"></i><span>0</span>
+            </a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section-p1">
+        <div class="hero-txt">
+            <h4>Trade-in-offer</h4>
+            <h1>Super Value deals</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Odit dolore officia delectus possimus assumenda ut? Impedit <br> repellendus perspiciatis maiores! Consectetur exercitationem <br> voluptatem similique officiis id incidunt nihil laborum ducimus.</p>
+            <div class="btn-group">
+                <button class="btn">
+                    <span><i class='bx bxs-cart-alt' style="color: #000;"></i></span>
+                    <a href="#" style="text-decoration: none; color: #000;">Shop Now!</a>
+                </button>
+                <button class="btn">
+                    <span><i class='bx bxs-calendar'></i></span>
+                    Book
+                </button>
+            </div>
+        </div>
+
+        <!-- Authentication Start -->
+        <div class="section">
+            <div class="wrapper">
+                <!-- Close -->
+                <span class="icon-close">
+                    <i class="fa fa-times"></i>
+                </span>
+                <!-- Close finish -->
+
+                <!-- Logins Begin -->
+                <div class="logbx">
+                    <!-- LogIn Start -->
+                    <div class="form-bx signin">
+                        <div class="logbx-title">
+                            <h2>Sign In</h2>
+                            <p>Welcome Back!</p>
+                        </div>
+                        <form action="#">
+                            <div class="input-bx">
+                                <span class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <input type="email" required>
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input-bx">
+                                <span class="icon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <input type="password" required>
+                                <label for="password">Password</label>
+                            </div>
+                            <div class="forgot">
+                                <label>
+                                    <input type="checkbox" >Remember me
+                                </label>
+                                <a href="#">Forgot password?</a>
+                            </div>
+                            <button type="submit" class="btn-log" id="log-in-btn">Login</button>
+                            <div class="logbx-link">
+                                <p>Don't have an account?
+                                    <a href="#" class="signup-link">SignUp</a>
+                                </p>
+                            </div>
+                        </form>
+                        <div class="media" >
+                            <button id="google-login-btn">Sign in with Google</button>
+                            <button id="twitterLogin">Sign in with Twitter</button>
+                            <button id="facebookLogin">Sign in with Facebook</button>
+                        </div>
+                        <!-- Logins End -->
+                    </div>
+                    <!-- SignIn Finish -->
+
+                    <!-- SignUp Start -->
+                    <div class="form-bx signup">
+                        <div class="logbx-title">
+                            <h2>Sign Up</h2>
+                            <p>Verification Procedure</p>
+                        </div>
+                        <form action="#" id="mainForm">
+                            <div class="input-bx">
+                                <span class="icon">
+                                    <i class="fas far fa-user"></i>
+                                </span>
+                                <input type="text" id="fname" name="fname" required>
+                                <label for="text">First Name</label>
+                            </div>
+                            <div class="input-bx">
+                                <span class="icon">
+                                    <i class="fas far fa-user"></i>
+                                </span>
+                                <input type="text" id="lname" name="lname" required>
+                                <label for="text">Last Name</label>
+                            </div>
+                            <div class="input-bx">
+                                <span class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <input type="email" id="email" name="email" required>
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input-bx">
+                                <span class="icon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <input type="password" id="password" name="password" required>
+                                <label for="password">Password</label>
+                            </div>
+                            <div class="forgot">
+                                <label>
+                                    <input type="checkbox" >I agree to the terms & conditions
+                                </label>
+                            </div>
+                            <button type="submit" value="sign up" class="btn-log">Sign Up</button>
+                            <div class="logbx-link">
+                                <p>Already have an account?
+                                    <a href="#" class="signin-link">Sign In</a>
+                                </p>
+                            </div>
+                        </form>
+                        <div class="media" >
+                            <button id="google-login-btn">Sign up with Google</button>
+                            <button id="twitterLogin">Sign up with Twitter</button>
+                            <button id="facebookLogin">Sign up with Facebook</button>
+                        </div>
+                        <!-- sign up end -->
+                    </div>
+                    <!-- SignUP Finish -->
+                </div>
+            </div>
+        </div>
+        <!-- Authentication Finish -->  
+    </section>
+
+    <!-- Features Section -->
+    <section id="feature" class="section-p1">
+        <div class="feature-bx">
+            <img src="images/features/f1.png" >
+            <h6>Free Shipping</h6>
+        </div>
+        <div class="feature-bx">
+            <img src="images/features/f2.png" >
+            <h6>Online Order</h6>
+        </div>
+        <div class="feature-bx">
+            <img src="images/features/f3.png" >
+            <h6>Save Money</h6>
+        </div>
+        <div class="feature-bx">
+            <img src="images/features/f4.png" >
+            <h6>Promotions</h6>
+        </div>
+        <div class="feature-bx">
+            <img src="images/features/f5.png" >
+            <h6>Happy Sell</h6>
+        </div>
+        <div class="feature-bx">
+            <img src="images/features/f6.png" >
+            <h6>24/7 Support</h6>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+   <section id="featured-products" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>Summer Collection New Modern Design</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="images/productts/f1.jpg">
+                <div class="description">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-shirts</h5>
+                    <div>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a class="add-cart cart1">
+                    <i class="fas fa-shopping-cart cart"></i>
+                </a>
+            </div>
+            <div class="pro">
+                <img src="images/productts/f2.jpg" >
+                <div class="description">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-shirts</h5>
+                    <div>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a class="add-cart cart2">
+                    <i class="fas fa-shopping-cart cart"></i>
+                </a>
+            </div>
+            <div class="pro">
+                <img src="images/productts/f3.jpg" >
+                <div class="description">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-shirts</h5>
+                    <div>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a class="add-cart cart3">
+                    <i class="fas fa-shopping-cart cart"></i>
+                </a>
+            </div>
+            <div class="pro">
+                <img src="images/productts/f4.jpg" >
+                <div class="description">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-shirts</h5>
+                    <div>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a class="add-cart cart4">
+                    <i class="fas fa-shopping-cart cart"></i>
+                </a>
+            </div>
+            <div class="pro">
+                <img src="images/productts/f5.jpg" >
+                <div class="description">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-shirts</h5>
+                    <div>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a class="add-cart cart5">
+                    <i class="fas fa-shopping-cart cart"></i>
+                </a>
+            </div>
+            <div class="pro">
+                <img src="images/productts/f3.jpg" >
+                <div class="description">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-shirts</h5>
+                    <div>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a class="add-cart cart6">
+                    <i class="fas fa-shopping-cart cart"></i>
+                </a>
+            </div>
+            <div class="pro">
+                <img src="images/productts/f6.jpg" >
+                <div class="description">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-shirts</h5>
+                    <div>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a class="add-cart cart7">
+                    <i class="fas fa-shopping-cart cart"></i>
+                </a>
+            </div>
+            <div class="pro">
+                <img src="images/productts/f7.jpg" >
+                <div class="description">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-shirts</h5>
+                    <div>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a class="add-cart cart8">
+                    <i class="fas fa-shopping-cart cart"></i>
+                </a>
+            </div>
+        </div>
+   </section>
+
+   <!-- Calll-to-Action -->
+   <section id="banner" class="section-m1">
+        <h4>Register Services</h4>
+        <h2>Up to <span>70% off</span> - All t-shirts & Accessories</h2>
+        <button class="normal">Explore More!</button>
+   </section>
+
+   <!-- New Arrivals -->
+   <section id="featured-products" class="section-p1">
+    <h2>New Arrivals</h2>
+    <p>Summer Collection New Modern Design</p>
+    <div class="pro-container">
+        <div class="pro">
+            <img src="images/productts/n8.jpg" >
+            <div class="description">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-shirts</h5>
+                <div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a class="add-cart cart9">
+                <i class="fas fa-shopping-cart cart"></i>
+            </a>
+        </div>
+        <div class="pro">
+            <img src="images/productts/n1.jpg" >
+            <div class="description">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-shirts</h5>
+                <div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a class="add-cart cart10">
+                <i class="fas fa-shopping-cart cart"></i>
+            </a>
+        </div>
+        <div class="pro">
+            <img src="images/productts/n2.jpg" >
+            <div class="description">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-shirts</h5>
+                <div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a class="add-cart cart11">
+                <i class="fas fa-shopping-cart cart"></i>
+            </a>
+        </div>
+        <div class="pro">
+            <img src="images/productts/n3.jpg" >
+            <div class="description">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-shirts</h5>
+                <div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a class="add-cart cart12">
+                <i class="fas fa-shopping-cart cart"></i>
+            </a>
+        </div>
+        <div class="pro">
+            <img src="images/productts/n4.jpg" >
+            <div class="description">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-shirts</h5>
+                <div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a class="add-cart cart13">
+                <i class="fas fa-shopping-cart cart"></i>
+            </a>
+        </div>
+        <div class="pro">
+            <img src="images/productts/n5.jpg" >
+            <div class="description">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-shirts</h5>
+                <div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a class="add-cart cart14">
+                <i class="fas fa-shopping-cart cart"></i>
+            </a>
+        </div>
+        <div class="pro">
+            <img src="images/productts/n6.jpg" >
+            <div class="description">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-shirts</h5>
+                <div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a class="add-cart cart15">
+                <i class="fas fa-shopping-cart cart"></i>
+            </a>
+        </div>
+        <div class="pro">
+            <img src="images/productts/n7.jpg" >
+            <div class="description">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-shirts</h5>
+                <div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a class="add-cart cart16">
+                <i class="fas fa-shopping-cart cart"></i>
+            </a>
+        </div>
+    </div>
+   </section>
+
+   <!-- Banner1 -->
+   <section id="sm-banner" class="section-p1">
+        <div class="banner-bx">
+            <h4>Crazy deals</h4>
+            <h2>buy 1 get 1 free</h2>
+            <span>The best classic dress is on sale at cara</span>
+            <button class="white">Learn More</button>
+        </div>
+        <div class="banner-bx banner-bx2">
+            <h4>Spring Summer</h4>
+            <h2>Upcoming Season</h2>
+            <span>The best classic dress is on sale at cara</span>
+            <button class="white">Collection</button>
+        </div>
+   </section>
+
+   <!-- Banner3 -->
+   <section id="banner3" class="section-p1">
+    <div class="banner-bx">
+        <h2>Seasonal Sale</h2>
+        <h3>Winter Collection - 50% off</h3>
+    </div>
+    <div class="banner-bx banner-bx2">
+        <h2>New Foot wear Collection</h2>
+        <h3>Spring / Summer 2022</h3>
+    </div>
+    <div class="banner-bx banner-bx3">
+        <h2>T-shirts</h2>
+        <h3>New trendy prints</h3>
+    </div>
+   </section>
+
+   <!-- News Letter -->
+   <section id="newsletter" class="section-p1">
+        <div class="newstext">
+            <h4>Sign Up for Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <button type="submit" id="signUp" value="sign up" class="normal">Sign Up</button>
+        </div>
+   </section>
+
+   <!-- Footer -->
+   <footer class="section-p1">
+        <div class="col">
+            <img src="images/RLEu2H01.svg" style="inline-size: 60px; block-size: auto; margin-block-end: 30px;">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 6544 Nairobi, Kenya</p>
+            <p><strong>Hours:</strong> 10:00 - 18:09, Mon - Sat</p>
+        </div>
+        <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-github"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+        <!-- Col2 -->
+        <div class="col">
+            <h4>About</h4>
+            <a href="about.html">About Us</a>
+            <a href="about.html">Delivery Information</a>
+            <a href="about.html">Privacy Policy</a>
+            <a href="about.html">Contact Us</a>
+        </div>
+        <!-- Col3 -->
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My wishlist</a>
+            <a href="#">Track my order</a>
+            <a href="#">Help</a>
+        </div>
+        <!-- Col4 -->
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="images/pay/app.jpg">
+                <img src="images/pay/play.jpg" >
+            </div>
+            <p>Secured payments Gateways</p>
+            <img src="images/pay/pay.png">
+        </div>
+
+        <div class="copyright">
+            <p>@ 2023, BlackShark - Eccommerce Website</p>
+        </div>
+        
+   </footer>
+
+    <!-- ----------- FIREBASE AUTHENTICATION ----- -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+        import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyAuERzXV_85EB8FYr_gRi8iOEeykf5FFHI",
+          authDomain: "hosting-74c66.firebaseapp.com",
+          databaseURL: "https://hosting-74c66-default-rtdb.firebaseio.com",
+          projectId: "hosting-74c66",
+          storageBucket: "hosting-74c66.appspot.com",
+          messagingSenderId: "80108073871",
+          appId: "1:80108073871:web:6a53b8f5f31b4f1e1f11fa"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        auth.languageCode = 'en';
+        const provider = new GoogleAuthProvider();
+
+        const google_login = document.getElementById("google-login-btn");
+        google_login.addEventListener("click", function(){
+            signInWithPopup(auth, provider)
+            .then((result) => {
+                // This gives you a Google Access Token. You can use it to access the Google API.
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const user = result.user;
+                // IdP data available using getAdditionalUserInfo(result)
+                console.log(user);
+                window.location.href = "../logged.html";
+
+            }).catch((error) => {
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message;                
+            });
+        })
+            
+    </script>
+</body>
+</html>
